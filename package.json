@@ -1,6 +1,6 @@
 {
   "name": "@nutint/test-package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "test publish of npm package",
   "main": "index.js",
   "scripts": {
