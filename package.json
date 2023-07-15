@@ -23,5 +23,8 @@
   "homepage": "https://github.com/nutint/test-package#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
   }
 }
