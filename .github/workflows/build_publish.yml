@@ -51,6 +51,8 @@ jobs:
           echo "RELEASE_VERSION=$(cat package.json | jq -r '.version')" >> $GITHUB_ENV
       - name: Publish to Github NPM Registry
         run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Record change logs
         run: |
           #!/bin/bash
