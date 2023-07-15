@@ -6,23 +6,10 @@ on:
     - main
     
 jobs:
-  echo-something:
+  build-change-logs:
     runs-on: ubuntu-latest
-    name: Echo Something
+    name: Build change logs
     steps:
-      - name: Echo
-        run: |
-          echo "Hello world"
-
-  publish:
-    runs-on: ubuntu-latest
-    name: Publish package
-    needs: [echo-something]
-    environment: production
-    steps:
-      - name: Publish
-        run: |
-          echo "Published"
       - name: Check out
         uses: actions/checkout@v3
       - name: Use pnpm from package.json
@@ -40,3 +27,11 @@ jobs:
           npx changeset version
           echo "RELEASE_VERSION=$(cat package.json | jq -r '.version')" >> $GITHUB_ENV
           cat ./CHANGELOG.md >> $GITHUB_STEP_SUMMARY
+
+  publish-package:
+    name: Publish package to Github
+    runs-on: ubuntu-latest
+    environment: production
+      - name: Publish
+        run: |
+          echo Published
