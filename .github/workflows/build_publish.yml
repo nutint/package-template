@@ -11,3 +11,12 @@ jobs:
       - name: Echo
         run: |
           echo "Hello world"
+
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish package
+    environment: production
+    steps:
+      - name: Publish
+        run: |
+          echo "Published"
