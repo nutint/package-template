@@ -32,6 +32,7 @@ jobs:
     name: Publish package to Github
     runs-on: ubuntu-latest
     environment: production
+    steps:
       - name: Publish
         run: |
           echo Published
