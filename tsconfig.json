@@ -1,20 +1,11 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "module": "commonjs",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "outDir": "dist",
-    "sourceMap": false,
-    "strict": true,
-    "esModuleInterop": true,
-    "target": "es2017",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": true,
-    "strictPropertyInitialization": false,
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true
   },
-  "compileOnSave": true,
   "include": ["src"],
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
-  "skipLibCheck": true
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
