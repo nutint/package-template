@@ -1,5 +1,11 @@
 # @nutint/test-package
 
+## 1.1.0
+
+### Minor Changes
+
+- 2fb97b0: Support typescript
+
 ## 1.0.2
 
 ### Patch Changes
